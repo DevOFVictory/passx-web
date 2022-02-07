@@ -1,0 +1,230 @@
+.wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fromleft 2.5s;
+}
+
+@keyframes fromleft {
+  0% {
+    margin-left: 100%;
+  }
+  50% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.wrapper .content {
+  width: 1600px;
+  height: 900px;
+  background-color: white;
+}
+
+.wrapper .content .passwords-wrapper div.big-add {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  top: 40%;
+  transform: translateY(-50%);
+  text-align: center;
+  display: none;
+}
+
+.wrapper .content .passwords-wrapper .big-add h1 {
+  color: gray;
+  font-size: 40px;
+}
+
+.wrapper .content .passwords-wrapper .big-add button {
+  width: 200px;
+  background-color: var(--primary-color);
+  float: bottom;
+  border: 0;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color .5s;
+  border-radius: 15px;
+}
+
+.wrapper .content .passwords-wrapper .big-add button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.wrapper .content .passwords-wrapper {
+  overflow-y: auto;
+  height: 818px;
+  margin-top: 82px;
+}
+
+.wrapper .content .passwords-wrapper .passwords {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wrapper .content .passwords-wrapper .passwords .title th {
+  font-weight: bold;
+  cursor: auto;
+}
+
+.wrapper .content .passwords-wrapper .passwords .title:hover{
+  background-color: white;
+}
+
+.wrapper .content .passwords-wrapper .passwords tr {
+  height: 80px;
+  transition: background-color .5s;
+  cursor: pointer;
+}
+
+.wrapper .content .passwords-wrapper .passwords tr:hover{
+  background-color: rgb(240, 240, 240);
+}
+
+.wrapper .content .passwords-wrapper .passwords tr th {
+  font-weight: normal;
+  padding: 1em;
+}
+
+@media (max-width: 550px) {
+  .wrapper .content .passwords-wrapper .passwords tr th {
+    display: none;
+  }
+  .wrapper .content .passwords-wrapper .passwords tr th:first-child {
+    display: block;
+    line-height: 80px;
+    padding: 0;
+  }
+}
+
+.wrapper .content .header {
+  height: 80px;
+  border-bottom: 3px solid rgb(150, 150, 150);
+  position: fixed;
+  width: 1600px;
+  background-color: white;
+}
+
+.wrapper .content .header .add-btn {
+  float: left;
+  height: 40px;
+  background-color: var(--primary-color);
+  width: 40px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 22.5px;
+  margin-left: 1%;
+  transition: background-color .5s;
+}
+
+.wrapper .content .header .add-btn:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.wrapper .content .header .add-btn a {
+  line-height: 40px;
+}
+
+.wrapper .content .header .search-bar {
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 1000px;
+  border: 1.5px solid rgb(150, 150, 150);
+  border-radius: 15px;
+  padding-left: 20px;
+  float: left;
+}
+
+.wrapper .content .header .search-bar:focus {
+  border: 3px solid var(--primary-color);
+  margin-top: 18.5px;
+  margin-left: 38.5px;
+  outline: none;
+}
+
+.wrapper .content .header .accountinfo {
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.wrapper .content .header .accountinfo h1 {
+  font-weight: 100;
+  color: rgb(100, 100, 100);
+  float: left;
+}
+
+.wrapper .content .header .accountinfo i {
+  margin-left: 10px;
+  transition: margin-top .3s;
+  font-size: 20px;
+  float: left;
+  margin-top: 30px;
+}
+
+.wrapper .content .header .accountinfo:hover i {
+  margin-top: 35px;
+}
+
+.accountoptions {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+
+@media (max-width:1600px), (max-height: 900px) {
+  .wrapper .content {
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper .content .header {
+    width: 100%;
+  }
+  .wrapper .content .passwords-wrapper {
+    height: calc(100% - 82px);
+  }
+  .wrapper .content .header .search-bar {
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .wrapper .content .header .search-bar {
+    width: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper .content .header #reload-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper .content .header .accountinfo h1 {
+    display: none;
+  }
+  .wrapper .content .header .accountoptions .content {
+    margin-left: -120px;
+  }
+}
+
+@media (max-width: 459px) {
+  .wrapper .content .header .accountoptions .content {
+    margin-left: -170px;
+    margin-top: -70px;
+  }
+}

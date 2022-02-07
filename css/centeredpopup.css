@@ -1,0 +1,174 @@
+.popup {
+  background-color: white;
+  z-index: 3;
+  border-radius: 15px;
+  padding: 30px;
+  left: 50%;
+  top: 60%;
+  opacity: 0;
+  transition: opacity, top .5s;
+  display: none;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 500px;
+  height: 700px;
+}
+
+div.question-popup {
+  height: 500px;
+}
+
+.popup.visible {
+  top: 50%;
+  opacity: 1;
+}
+
+.popup h1 {
+  text-align: center;
+}
+
+.popup hr {
+  width: 30px;
+  text-align:center;
+  border: 1.5px solid rgb(100, 100, 100);
+}
+
+.popup .content {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.popup button {
+  width: 200px;
+  background-color: var(--primary-color);
+  float: bottom;
+  border: 0;
+  height: 50px;
+  margin-left: calc(50% - 100px);
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: background-color .5s;
+  border-radius: 15px;
+}
+
+.popup button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.popup input, textarea {
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 80%;
+  border: 1.5px solid rgb(150, 150, 150);
+  border-radius: 15px;
+  padding-left: 20px;
+  float: left;
+}
+
+.popup textarea {
+  resize: vertical;
+  padding-top: 10px;
+  height: 60px;
+  max-height: 120px;
+  min-height: 24px;
+}
+
+.popup input:focus, textarea:focus {
+  border: 3px solid var(--primary-color);
+  margin-top: 18.5px;
+  margin-left: 38.5px;
+  outline: none;
+}
+
+div.change-accountinfo-popup {
+  height: 300px;
+}
+
+div.change-accountinfo-popup button {
+  width: 170px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.popup .icon {
+  float: right;
+  width: 25px;
+  height: 25px;
+  margin-top: -35px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.popup .icon.left {
+  margin-right: 55px;
+}
+
+.popup .icon img {
+  width: 25px;
+  filter: opacity(0.3);
+  transition: all .3s;
+}
+
+.popup .icon:hover img {
+  filter: opacity(0.5);
+}
+
+/** Transparent Background **/
+
+.background-black {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index:2;
+  transition: background-color .5s;
+  display: none;
+}
+
+.background-black.visible {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 500px) {
+  .popup {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .popup input, textarea {
+    width: 80vw;
+    margin-left: 0;
+  }
+  .edit-popup .icon {
+    margin-right: 0;
+  }
+  .edit-popup .icon.left {
+    margin-right: 35px;
+  }
+}
+
+@media (max-height: 700px) {
+  .popup {
+    height: 100%;
+  }
+  .popup button {
+    width: 170px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 500px) {
+  .popup button {
+    width: 100px;
+    margin-left: 35px;
+  }
+}

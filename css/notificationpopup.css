@@ -1,0 +1,40 @@
+.notification {
+  position: fixed;
+  bottom: -30px;
+  left: 0;
+  background-color: rgb(240, 240, 240);
+  z-index: 100;
+  margin: 10px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.visible {
+  opacity: 1;
+  bottom: 0;
+}
+
+.notification i {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.notification h1 {
+  font-size: 20px;
+}
+
+.notification h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.notification h2 b {
+  font-weight: bold;
+  color: var(--primary-color);
+}
